@@ -40,10 +40,12 @@ public class StringCalculator {
 				}
 				if (!listNegatives.isEmpty())
 					throw new Exception("negatives not allowed" + listNegatives);
-
+				
+			}else {
+				throw new Exception("Number not allowed: "+numbers);
 			}
-		} catch (Exception ex) {
-            throw new NumberFormatException("Number not allowed: "+numbers);
+		} catch (NumberFormatException ex) {
+            throw new NumberFormatException("Number not allowed: "+ex);
 
 		}
 
